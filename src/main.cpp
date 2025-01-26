@@ -40,6 +40,9 @@ void autonomous() {
 	//Test movement
 	chassis.setPose(0,0,0);
 	chassis.moveToPose(48, 48, 90, 8000, {.forwards = true}, false);
+	pros::delay(1000);
+	chassis.moveToPose(0, 0, 0, 8000, {.forwards = false}, false);
+	pros::delay(1000);
 
 	//Auton finish message
 	master.set_text(0, 0, "Auton done");
